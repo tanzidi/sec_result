@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 
-reg = 2014331512
+first_sem_full = []
+reg = 2015331503
 
 try:
     df = pd.read_excel('data/Q_GPA_1st.xlsx')
@@ -34,6 +35,14 @@ try:
     # first_sem_final.append(lg_cal(df1['GPA_1st'].values[0]))
 
     # print(first_sem_code, first_sem_gp, first_sem_lg, first_sem_cr, first_sem_final)
+    for i in range(0, len(first_sem_code)):
+        dict = {}
+        dict['code'] = first_sem_code[i]
+        dict['title'] = "nothing"
+        dict['gp'] = first_sem_gp[i]
+        dict['lg'] = first_sem_lg[i]
+        dict['cr'] = first_sem_cr[i]
+        first_sem_full.append(dict)
 except:
     print("no resutl for 1st sem")
 
@@ -325,4 +334,4 @@ try:
 except:
     print("no res for sem 8 ex")
 
-print(name)
+print(first_sem_full)

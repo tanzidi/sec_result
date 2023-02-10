@@ -1,3 +1,4 @@
+base = '''
 <!DOCTYPE html>
     <head>
         <style>
@@ -304,3 +305,9 @@
         
     </body>
 </html>
+'''
+
+import webbrowser
+new = 2
+url = "file:///C:/Users/USER/Desktop/result/demo.html"
+webbrowser.open(url,new=new)

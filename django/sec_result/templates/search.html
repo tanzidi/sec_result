@@ -43,19 +43,32 @@
             font-size: 1.5em;
             width: 4em;
         }
+        .container {
+            position: relative;
+        }
+        .error {
+            position: absolute;
+            top: 18em;
+            width: 100%;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        
-        <form action="search">
+        <div class="error">
+            {% if err %}
+            <p class="text-danger">{{err}}</p>
+            {% endif %}
+        </div>
+        <form action="/gradesheet/", method="get">
             <h1 style="text-align: left; padding-bottom: .5em; font-size: 3.5em;">Gradesheet for Session 2017-18</h1>
             <div class="input-group">
                 <div class="form-outline">
-                  <input type="search" id="form1" class="form-control active" placeholder="Enter Registration No.">
+                  <input type="search" id="form1" name="reg" class="form-control active" placeholder="Enter Registration No.">
                 <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div>
                 <div class="form-notch-trailing"></div></div></div>
-                <button type="button" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary">
                   <i class="fas fa-search"></i>
                 </button>
               </div>

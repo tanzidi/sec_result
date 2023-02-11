@@ -572,21 +572,27 @@
                     <div class="semester">
                         <div style="padding-top: 1.3em; padding-bottom: 1em; font-size: .8em; display: grid; grid-template-columns: 3fr 1fr;">
                             <div style="margin-left: 1.5em; font-weight: bold;">First Year First Semester {{year}}</div>
-                            <div style="font-weight: bold;">Held on: {{h7}}</div>
+                            <div style="font-weight: bold;">Held on: {{h8_ex}}</div>
                         </div>
                         <div class="table">
                             <span>Course No.</span><span class="left">Course Title</span><span>Credit</span><span style="padding: 0;"><div class="double_row"><span>Grade Obtained</span><span>Grade Point</span><span>Letter Grade</span></div></span>
-                            {% if sem7 %}
-                                {% for i in sem7 %}
+                            {% if sem8_ex %}
+                                {% for i in sem8_ex %}
                                     <span>{{i.code}}</span><span class="left">{{i.title}}</span><span>{{i.cr}}</span><span>{{i.gp}}</span><span>{{i.lg}}</span>
                                 {% endfor %}
                             {% endif %}
-                            <span style="border: 0px !important"></span><span class="right">This Semester Total :</span><span>{{sem7_final.cr_cur}}</span><span>{{sem7_final.gp_cur}}</span><span>{{sem7_final.lg_cur}}</span>
-                            <span style="border: 0px !important"></span><span class="right">Comulative :</span><span>{{sem7_final.cr_com}}</span><span>{{sem7_final.gp_com}}</span><span>{{sem7_final.lg_com}}</span>
+                            <span style="border: 0px !important"></span><span class="right">This Semester Total :</span><span>{{sem8_ex_final.cr_cur}}</span><span>{{sem8_ex_final.gp_cur}}</span><span>{{sem8_ex_final.lg_cur}}</span>
+                            <span style="border: 0px !important"></span><span class="right">Comulative :</span><span>{{sem8_ex_final.cr_com}}</span><span>{{sem8_ex_final.gp_com}}</span><span>{{sem8_ex_final.lg_com}}</span>
                         </div>
                     </div>
                     <div class="total_com">
-                        total_commulative
+                        <div class="total_com_container">
+                            <u><h3>Final Result</h3></u>
+                            <div class="total_com_container_table">
+                                <span style="text-align: left; font-size: 1em;">Comulative</span><span>Credits</span><span>CGPA</span><span>Letter Grade</span>
+                                <span style="text-align: left; font-size: 1em">Final Result</span><span>{{sem8_ex_final.cr_com}}</span><span>{{sem8_ex_final.gp_com}}</span><span>{{sem8_ex_final.lg_com}}</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="teacher">
                         <div style="font-size: .9em;">
@@ -671,7 +677,7 @@
                             <u><h3>Final Result</h3></u>
                             <div class="total_com_container_table">
                                 <span style="text-align: left; font-size: 1em;">Comulative</span><span>Credits</span><span>CGPA</span><span>Letter Grade</span>
-                                <span style="text-align: left; font-size: 1em">Final Result</span><span>160.5</span><span>3.67</span><span>A-</span>
+                                <span style="text-align: left; font-size: 1em">Final Result</span><span>{{sem8_final.cr_com}}</span><span>{{sem8_final.gp_com}}</span><span>{{sem8_final.lg_com}}</span>
                             </div>
                         </div>
                     </div>

@@ -114,7 +114,7 @@ def gradesheet(request):
                 # print(df)
                 # print(df)
                 ret = gen(df=df, reg=reg, credit_list=credit_list, title_list=title_list)
-                print(ret)
+                # print(ret)
                 name = ret['name']
                 all.append(ret)
                 # print(ret)
